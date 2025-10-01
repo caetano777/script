@@ -1,140 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&family=Roboto:wght@400;500;700&display=swap');
 
-        /* CSS para Estilização do Formulário e da Impressão */
-        @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&family=Roboto:wght@400;500;700&display=swap');
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f7f6;
+    color: #333;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
 
-        body {
-            font-family: 'Roboto', sans-serif;
-            background-color: #f4f7f6;
-            color: #333;
-            margin: 0;
-            padding: 20px;
-            display: flex;
-            justify-content: center;
-            align-items: flex-start;
-        }
+.container {
+    width: 100%;
+    max-width: 800px;
+    background: #fff;
+    padding: 30px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    border-radius: 8px;
+}
 
-        .container {
-            width: 100%;
-            max-width: 800px;
-            background: #fff;
-            padding: 30px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-            border-radius: 8px;
-        }
+h1 {
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 25px;
+}
 
-        h1 {
-            text-align: center;
-            color: #2c3e50;
-            margin-bottom: 25px;
-        }
+.form-group {
+    margin-bottom: 15px;
+}
 
-        .form-group {
-            margin-bottom: 15px;
-        }
+label {
+    display: block;
+    font-weight: 900;
+    margin-bottom: 8px;
+    color: #555;
+}
 
-        label {
-            display: block;
-            font-weight: 900;
-            margin-bottom: 8px;
-            color: #555;
-        }
+.radio-group label {
+    display: inline-block;
+    margin-right: 15px;
+    font-weight: 500;
+}
+.radio-group input[type="radio"] {
+     margin-right: 5px;
+}
 
-        /* SELETOR ATUALIZADO PARA INCLUIR TEXTAREA */
-        input[type="text"],
-        input[type="number"],
-        select,
-        textarea {
-            width: 100%;
-            padding: 12px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            box-sizing: border-box;
-            font-size: 16px;
-            font-family: 'Roboto', sans-serif; /* Garante a mesma fonte */
-        }
-        
-        .plan-group {
-            display: grid;
-            grid-template-columns: 2fr 1fr;
-            gap: 10px;
-        }
+input[type="text"],
+input[type="number"],
+select,
+textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
+}
 
-        button {
-            width: 100%;
-            padding: 15px;
-            background-color: #27ae60;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            font-size: 18px;
-            font-weight: bold;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-            margin-top: 15px;
-        }
+.plan-group {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 10px;
+}
 
-        button:hover {
-            background-color: #229954;
-        }
+button {
+    width: 100%;
+    padding: 15px;
+    background-color: #27ae60;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 15px;
+}
 
-        #output {
-            display: none;
-        }
-        
-        @media print {
-            body {
-                background-color: #fff;
-                color: #000;
-                margin: 40px 25px; 
-            }
+button:hover {
+    background-color: #229954;
+}
 
-            .container {
-                display: none; 
-            }
+#output { 
+    display: none; 
+}
 
-            #output {
-                display: block; 
-                font-family: 'Roboto Mono', monospace;
-                font-size: 12pt;
-                line-height: 1.4; /* Aumentado para melhor legibilidade */
-                width: 100%;
-            }
-
-            #output h2 {
-                text-align: center;
-                font-size: 12pt;
-                font-weight: 700;
-                color: #000;
-                background: none;
-                border-bottom: 2px solid #333;
-                padding-bottom: 10px;
-                margin-bottom: 20px; /* Aumentado espaçamento */
-            }
-
-            .output-line {
-                margin-bottom: 8px;
-                padding-bottom: 8px;
-                border-bottom: 1px solid #eee;
-            }
-
-            .output-line span {
-                font-weight: 700;
-                margin-right: 8px;
-            }
-            
-            .output-line .data {
-                font-weight: 400;
-                display: inline; 
-            }
-
-            .checklist-item {
-                font-size: 11pt;
-                margin-bottom: 6px;
-            }
-            
-            hr.dashed {
-                border: none;
-                border-top: 1px dashed #888;
-                margin: 25px 0;
-            }
-        }
+@media print {
+    body { 
+        background-color: #fff; 
+        color: #000; 
+        margin: 40px 25px; 
+    }
+    .container { 
+        display: none; 
+    }
+    #output {
+        display: block; 
+        font-family: 'Roboto Mono', monospace;
+        font-size: 12pt;
+        line-height: 1.4;
+        width: 100%;
+    }
+    #output h2 {
+        text-align: center;
+        font-size: 12pt;
+        font-weight: 700;
+        color: #000;
+        background: none;
+        border-bottom: 2px solid #333;
+        padding-bottom: 10px;
+        margin-bottom: 20px;
+    }
+    .output-line { 
+        margin-bottom: 8px; 
+        padding-bottom: 8px; 
+        border-bottom: 1px solid #eee; 
+    }
+    .output-line span { 
+        font-weight: 700; 
+        margin-right: 8px; 
+    }
+    .output-line .data { 
+        font-weight: 400; 
+        display: inline; 
+    }
+    .checklist-item { 
+        font-size: 11pt; 
+        margin-bottom: 6px; 
+    }
+    hr.dashed { 
+        border: none; 
+        border-top: 1px dashed #888; 
+        margin: 25px 0; 
+    }
+}
